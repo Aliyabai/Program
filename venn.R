@@ -87,3 +87,82 @@ tiff(filename = "Five-set Venn diagram.tiff", compression = "lzw");
 grid.draw(venn.plot);
 
 dev.off();
+
+=====================================================================
+
+library(VennDiagram)
+venn.plot <- draw.quintuple.venn(
+        area1 = 16189, 
+        area2 = 9062, 
+        area3 = 10867, 
+        area4 = 15432, 
+        area5 = 15590, 
+        n12 = 6087, 
+        n13 = 7492, 
+        n14 = 10422, 
+        n15 = 11016, 
+        n23 = 5589, 
+        n24 = 6030, 
+        n25 = 6184, 
+        n34 = 7385, 
+        n35 = 7576, 
+        n45 = 10942, 
+        n123 = 3904, 
+        n124 = 4334, 
+        n125 = 4418, 
+        n134 = 5351, 
+        n135 = 5523, 
+        n145 = 7911, 
+        n234 = 3689, 
+        n235 = 3884, 
+        n245 = 4511, 
+        n345 = 5579, 
+        n1234 = 2710, 
+        n1235 = 2824, 
+        n1245 = 3302, 
+        n1345 = 4143, 
+        n2345 = 2794, 
+        n12345 = 2084, 
+        category = c("Hela_1", "Hela_2", "Hela_3", "Hela_20", "Hela_S"), 
+        fill = c("dodgerblue", "goldenrod1", "darkorange1", "seagreen3", "orchid3"), 
+        cat.col = c("dodgerblue", "goldenrod1", "darkorange1", "seagreen3", "orchid3"),
+        cat.cex = 1.5,
+        margin = 0.05,
+        cex = c(1.5, 1.5, 1.5, 1.5, 1.5, 1, 0.8, 1, 0.8, 1, 0.8, 1, 0.8, 1, 0.8, 1, 0.55, 1, 0.55, 1, 0.55, 1, 0.55, 1, 0.55, 1, 1, 1, 1, 1, 1.5),
+        ind = TRUE
+        );
+
+# Writing to file
+tiff(filename = "Five-set Venn diagram.tiff", compression = "lzw");
+        
+grid.draw(venn.plot);
+
+dev.off();
+
+=====================================================================
+venn.plot <- draw.quad.venn(
+        area1 = 8053, 
+        area2 = 10323, 
+        area3 = 17038, 
+        area4 = 13172,  
+        n12 = 4509, 
+        n13 = 5499, 
+        n14 = 4784,  
+        n23 = 7457, 
+        n24 = 6424,  
+        n34 = 9751,   
+        n123 = 3243, 
+        n124 = 2933,  
+        n134 = 3466,  
+        n234 = 4845, 
+        n1234 = 2124, 
+        category = c("YH_1", "YH_2", "YH_20", "YH_S"), 
+        fill = c("dodgerblue", "goldenrod1", "darkorange1", "seagreen3"), 
+        cat.col = c("dodgerblue", "goldenrod1", "darkorange1", "seagreen3"),
+        cat.cex = 1.5,
+        margin = 0.05,
+        cex = c(1.5, 1, 1.5, 1, 1 , 1 , 1 , 1, 1.5  , 1, 1, 1, 1, 1.5, 1),
+        ind = TRUE
+        );
+
+
